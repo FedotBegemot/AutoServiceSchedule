@@ -1,6 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Welcome extends React.Component{
+import './styles.css'
+
+export default class Welcome extends Component{
     render() {
         return(
             <div className="jumbotron">
@@ -11,5 +13,3 @@ class Welcome extends React.Component{
         );
     }
 }
-
-export default Welcome

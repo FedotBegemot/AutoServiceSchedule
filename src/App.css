@@ -60,11 +60,13 @@
 }
 
 .jumbotron {
-  background-color: #b6b6b6;
-  padding-left: 60px;
-  padding-right: 60px;
+  background-color: #383737;
   margin-bottom: 30px;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 30px 60px;
+  color: white;
+}
+
+p{
+  color: white;
 }
 

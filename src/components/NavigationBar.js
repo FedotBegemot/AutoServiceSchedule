@@ -1,25 +1,28 @@
-import React from "react";
+import React, {Component} from "react";
 import {Navbar, Nav} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
-class NavigationBar extends React.Component{
+import './styles.css'
+
+export default class NavigationBar extends Component{
     render() {
         return (
             <Navbar bg="dark" variant="dark">
-                <Navbar.Brand href="#home">Управление расписанием автосервиса</Navbar.Brand>
-                <img
-                    src="https://cdn4.iconfinder.com/data/icons/BRILLIANT/transportation/png/400/muscle_car.png"
-                    width="50"
-                    height="50"
-                    alt="brand"
-                />{" "}
+                <Link to={""} className="navbar-brand">
+                    Управление расписанием автосервиса
+                    <img
+                        src="https://cdn4.iconfinder.com/data/icons/BRILLIANT/transportation/png/400/muscle_car.png"
+                        width="50"
+                        height="50"
+                        alt="brand"
+                    />
+                </Link>
                 <Nav className="me-auto">
                     {/*<Nav.Link href="#home">Home</Nav.Link>*/}
-                    <Nav.Link href="#">Добавить заявку</Nav.Link>
-                    <Nav.Link href="#">Раписание</Nav.Link>
+                    <Link to={"add"} className="nav-link">Добавить заявку</Link>
+                    <Link to={"list"} className="nav-link">Заявки на ремонт</Link>
                 </Nav>
             </Navbar>
         )
     }
 }
-
-export default NavigationBar;
