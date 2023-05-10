@@ -1,7 +1,9 @@
 import React, {Component} from "react";
+import {Card, Form, Button, Col, Row} from "react-bootstrap";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPlusSquare, faSave} from '@fortawesome/free-solid-svg-icons';
 
 import './styles.css'
-import {Card, Form, Button, Col, Row} from "react-bootstrap";
 
 export default class AddRequest extends Component{
     constructor(props) {
@@ -26,7 +28,7 @@ export default class AddRequest extends Component{
     render() {
         return(
             <Card className={"border border-dark bg-dark text-white"}>
-                <Card.Header> Добавить заявку</Card.Header>
+                <Card.Header><FontAwesomeIcon icon={faPlusSquare} /> Добавить заявку</Card.Header>
                     <Form onSubmit={this.submitRequest} id={"requestFormId"}>
                         <Card.Body>
                         <Form.Group as={Col} className="mb-3" controlId="formGridVin">
@@ -90,7 +92,7 @@ export default class AddRequest extends Component{
                         </Card.Body>
                             <Card.Footer style={{"textAlign":"right"}}>
                                 <Button variant="success" type="submit">
-                                    Добавить
+                                    <FontAwesomeIcon icon={faSave} /> Добавить
                                 </Button>
                             </Card.Footer>
                     </Form>

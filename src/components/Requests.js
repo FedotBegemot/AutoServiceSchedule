@@ -1,13 +1,30 @@
 import React, {Component} from "react";
 import {Card, Table} from "react-bootstrap";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faList} from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
+
 
 import './styles.css'
 
 export default class Requests extends Component{
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            requests : []
+        };
+    }
+
+    componentDidMount() {
+        axios.get("")
+            .then(response => console.log(response.data));
+    }
+
     render() {
         return(
             <Card className={"border border-dark bg-dark text-white"}>
-                <Card.Header> Расписание работ</Card.Header>
+                <Card.Header><FontAwesomeIcon icon={faList} /> Расписание работ</Card.Header>
                 <Card.Body>
                     <Table bordered hover striped variant={"dark"}>
                         <thead>
